@@ -1,0 +1,84 @@
+.footer_container {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%); */
+}
+
+.footer_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    padding: 1rem;
+    color: #333;
+    /* Adjust this based on your theme */
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 20px;
+    color: #0066ff;
+    /* Adjust to theme.primary */
+}
+
+.nav {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.nav_link {
+    color: #333;
+    /* theme.text_primary */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav_link:hover {
+    color: #0066ff;
+    /* theme.primary */
+}
+
+@media (max-width: 768px) {
+    .nav_link {
+        font-size: 1rem;
+    }
+}
+
+.social_media_icons {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.social_media_icon {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    /* theme.text_primary */
+    transition: color 0.2s ease-in-out;
+}
+
+.social_media_icon:hover {
+    color: #0066ff;
+    /* theme.primary */
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+    /* theme.soft2 */
+    text-align: center;
+}
