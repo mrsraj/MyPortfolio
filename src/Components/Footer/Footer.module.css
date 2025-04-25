@@ -15,14 +15,12 @@
     align-items: center;
     padding: 1rem;
     color: #333;
-    /* Adjust this based on your theme */
 }
 
 .logo {
     font-weight: 600;
     font-size: 20px;
     color: #0066ff;
-    /* Adjust to theme.primary */
 }
 
 .nav {
@@ -38,8 +36,7 @@
 }
 
 .nav_link {
-    color: #333;
-    /* theme.text_primary */
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.2s ease-in-out;
@@ -47,7 +44,6 @@
 
 .nav_link:hover {
     color: #0066ff;
-    /* theme.primary */
 }
 
 @media (max-width: 768px) {
@@ -65,7 +61,7 @@
     display: inline-block;
     margin: 0 1rem;
     font-size: 1.5rem;
-    color: #333;
+    color: var(--text-primary);
     /* theme.text_primary */
     transition: color 0.2s ease-in-out;
 }
@@ -78,7 +74,7 @@
 .copyright {
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #888;
+    color: #c3bcbc;
     /* theme.soft2 */
     text-align: center;
 }
