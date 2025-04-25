@@ -1,19 +1,24 @@
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { darkTheme, lightTheme } from './utils/Thems.js'
-import Navbar from "./Components/Navbar/Navbar.jsx";
+import { Suspense, lazy } from "react";
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-import HeroSection from "./Components/HeroSection/Hero.jsx";
-import About from "./Components/About/About.jsx";
-import Skills from "./Components/Skills/Skills.jsx";
-import Projects from "./Components/Projects/Project.jsx";
-import Contact from "./Components/Contact/Contact.jsx";
-import Footer from "./Components/Contact/Contact.jsx";
-import Experience from "./Components/Experience/Experience.jsx";
-import Education from "./Components/Education/Education.jsx";
-import ProjectModal from "./Components/ProjectDetails/ProjectDetails.jsx";
+
+import Navbar from "./Components/Navbar/Navbar.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import Loading from "./LoadingComponent/Loading.jsx";
 import styled from "styled-components";
+
+
+
+const HeroSection = lazy(() => import("./Components/HeroSection/Hero.jsx"));
+const Skills = lazy(() => import("./Components/Skills/Skills.jsx"));
+const Experience = lazy(() => import("./Components/Experience/Experience.jsx"));
+const Projects = lazy(() => import("./Components/Projects/Project.jsx"));
+const Education = lazy(() => import("./Components/Education/Education.jsx"));
+const Contact = lazy(() => import("./Components/Contact/Contact.jsx"));
+const ProjectModal = lazy(() => import("./Components/ProjectDetails/ProjectDetails.jsx"));
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -29,30 +34,38 @@ const Wrapper = styled.div`
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal)
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
+      <Router>
         <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectModal openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Body>
+        <Suspense fallback={<Loading/>}>
+          <Body>
+            <HeroSection />
+            
+            <Wrapper>
+              <Skills />
+              <Experience />
+            </Wrapper>
+
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+
+            <Wrapper>
+              <Education />
+              <Contact />
+            </Wrapper>
+
+            <Footer />
+
+            {openModal.state && (<ProjectModal openModal={openModal} setOpenModal={setOpenModal}/>
+            )}
+
+          </Body>
+        </Suspense>
       </Router>
     </ThemeProvider>
   );
 }
+
 
 export default App;
