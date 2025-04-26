@@ -8,7 +8,8 @@ const projects = [
         //image:"https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
         tags: ["React Js", "ContextAPI", "ReactQuery", "MySQL", "Django", "Django Rest Framework", "JavaScript", "HTML", "CSS"],
         category: "Web App",
-        github: "https://github.com/rishavchanda/Podstream",
+        github_UI: "https://github.com/mrsraj/Work-Tracking",
+        github_API: "https://github.com/mrsraj/Work-Tracking-APIs",
         //webapp: "https://podstream.netlify.app/",
         // member: [
         //     {
