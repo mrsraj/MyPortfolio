@@ -5,7 +5,7 @@ const projects = [
         date: "July 2024 - December 2024",
         description:
             " Used for task management, project tracking, and team collaboration. Features include drag-and-drop card movement, customizable Task, customizable Task , customizable boards,  and cards.",
-        image:"image/wt.png",
+        image:"/image/wt.png",
         tags: ["React Js", "ContextAPI", "ReactQuery", "MySQL", "Django", "Django Rest Framework", "JavaScript", "HTML", "CSS"],
         category: "Web App",
         github_UI: "https://github.com/mrsraj/Work-Tracking",
@@ -32,7 +32,7 @@ const projects = [
         //date: "Oct 2022 - Present",
         description:
             "I designed and created a user-friendly website that allows users to search for recipes by food type or name.",
-        image: "image/recipefinder.png",
+        image: "/image/recipefinder.png",
         tags: [
             "JavaScript",
             "HTML",
@@ -50,7 +50,7 @@ const projects = [
         //date: "jan 2025 - Mar 2025",
         description:
             "A coaching portfolio website that highlights offered courses, course introduction videos, and faculty expertise. It provides detailed insights into programs, student testimonials, and easy contact options for inquiries and enrollment.",
-        image:"image/coaching.png",
+        image:"/image/coaching.png",
         tags: ["React.js","ContextAPI","React Router","Javascript","HTML","CSS"],
         category: "Website",
         github: "https://github.com/mrsraj/Coaching-Portfolio",
@@ -76,7 +76,7 @@ const projects = [
         //date: "Dec 2021 - Apr 2022",
         description:
             "A modern restaurant website showcasing the menu, chef specials, and ambiance through high-quality images and videos. It includes online table booking, location details, and customer reviews for a complete dining experience.",
-        image:"image/resturant.png",
+        image:"/image/resturant.png",
         tags: ["React.js","JavaScript", "ContextAPI", "CSS Module", "HTML"],
         category: "Website",
         github: "https://github.com/rishavchanda/Buckoid-Android-App",
